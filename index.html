@@ -127,24 +127,23 @@
         <section id="scene4" class="scene">
             <div class="space-environment">
                 <h1 id="happy-birthday-text">HAPPY BIRTHDAY</h1>
-                <div class="cake-container" id="space-cake" style="--draw-duration: 35s;">
+                <div class="cake-container" id="space-cake" style="--draw-duration: 31s;">
                     <img src="assets/noun-cake-8259639.svg" alt="Cake" class="cake-svg inject-svg drawable-svg">
+                    <div id="final-polaroid" class="polaroid-inner hidden">
+                        <div id="final-message" class="hidden">Thank you for coming in this universe.</div>
+                        <div class="photo-placeholder">[FINAL_IMAGE]</div>
+                        <div class="caption">[FINAL_MESSAGE]</div>
+                    </div>
+                    <div class="press-hint" id="cake-hint">
+                        <span class="press-text">Cut the cake!</span>
+                        <svg class="squiggly-arrow" viewBox="0 0 100 100" style="transform: rotate(180deg);">
+                            <path d="M70 10 Q 50 30, 70 50 T 40 80" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
+                            <path d="M35 70 L 40 80 L 52 75" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
                 </div>
-                <div class="press-hint" id="cake-hint"
-                    style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); opacity: 0;">
-                    <span class="press-text">Cut the cake!</span>
-                    <svg class="squiggly-arrow" viewBox="0 0 100 100" style="transform: rotate(180deg);">
-                        <path d="M70 10 Q 50 30, 70 50 T 40 80" fill="none" stroke="#fff" stroke-width="4"
-                            stroke-linecap="round" />
-                        <path d="M35 70 L 40 80 L 52 75" fill="none" stroke="#fff" stroke-width="4"
-                            stroke-linecap="round" />
-                    </svg>
-                </div>
-                <div id="final-polaroid" class="polaroid-inner hidden">
-                    <div class="photo-placeholder">[FINAL_IMAGE]</div>
-                    <div class="caption">[FINAL_MESSAGE]</div>
-                </div>
-                <div id="final-message" class="hidden">Thank you for being part of this universe.</div>
             </div>
         </section>
 
