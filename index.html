@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MorphSVGPlugin.min.js"></script>
     <!-- particles -->
 </head>
+
 <body>
 
     <!-- audio -->
@@ -25,12 +27,17 @@
         <!-- scene 1 -->
         <section id="scene1" class="scene active">
             <div class="floral-env">
-            <!-- svgs -->
-                <div class="flower top-left"><img src="assets/noun-lily-2625246.svg" alt="Lily" class="flower-icon lily inject-svg drawable-svg"></div>
-                <div class="flower bottom-left"><img src="assets/noun-lily-2625259(1).svg" alt="Lily" class="flower-icon lily inject-svg drawable-svg"></div>
-                <div class="flower right-center"><img src="assets/noun-sunflower-7681515.svg" alt="Sunflower" class="flower-icon sunflower inject-svg drawable-svg"></div>
-                <div class="flower top-right"><img src="assets/noun-sunflower-5630837.svg" alt="Sunflower" class="flower-icon sunflower inject-svg drawable-svg"></div>
-                <div class="flower bottom-right"><img src="assets/noun-sunflower-7500911.svg" alt="Sunflower" class="flower-icon sunflower inject-svg drawable-svg"></div>
+                <!-- svgs -->
+                <div class="flower top-left"><img src="assets/noun-lily-2625246.svg" alt="Lily"
+                        class="flower-icon lily inject-svg drawable-svg"></div>
+                <div class="flower bottom-left"><img src="assets/noun-lily-2625259(1).svg" alt="Lily"
+                        class="flower-icon lily inject-svg drawable-svg"></div>
+                <div class="flower right-center"><img src="assets/noun-sunflower-7681515.svg" alt="Sunflower"
+                        class="flower-icon sunflower inject-svg drawable-svg"></div>
+                <div class="flower top-right"><img src="assets/noun-sunflower-5630837.svg" alt="Sunflower"
+                        class="flower-icon sunflower inject-svg drawable-svg"></div>
+                <div class="flower bottom-right"><img src="assets/noun-sunflower-7500911.svg" alt="Sunflower"
+                        class="flower-icon sunflower inject-svg drawable-svg"></div>
             </div>
 
             <div class="polaroid-frame centerpiece">
@@ -43,11 +50,20 @@
             <div class="rocket-container">
                 <div class="rocket-svg-wrapper">
                     <!-- space bg -->
-                    <svg class="rocket-orbit-item star 1" viewBox="0 0 24 24" width="24" height="24"><path fill="#fff" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z"/></svg>
-                    <svg class="rocket-orbit-item star 2" viewBox="0 0 24 24" width="16" height="16"><path fill="#ffd700" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z"/></svg>
-                    <svg class="rocket-orbit-item planet 1" viewBox="0 0 30 30" width="30" height="30"><circle cx="15" cy="15" r="10" fill="#00f0ff" opacity="0.8"/><ellipse cx="15" cy="15" rx="14" ry="4" transform="rotate(20 15 15)" fill="none" stroke="#fff" stroke-width="1.5"/></svg>
+                    <svg class="rocket-orbit-item star 1" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="#fff" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z" />
+                    </svg>
+                    <svg class="rocket-orbit-item star 2" viewBox="0 0 24 24" width="16" height="16">
+                        <path fill="#ffd700" d="M12,2L14.8,9.2L22,12L14.8,14.8L12,22L9.2,14.8L2,12L9.2,9.2L12,2Z" />
+                    </svg>
+                    <svg class="rocket-orbit-item planet 1" viewBox="0 0 30 30" width="30" height="30">
+                        <circle cx="15" cy="15" r="10" fill="#00f0ff" opacity="0.8" />
+                        <ellipse cx="15" cy="15" rx="14" ry="4" transform="rotate(20 15 15)" fill="none" stroke="#fff"
+                            stroke-width="1.5" />
+                    </svg>
                     <div class="rocket-svg">
-                        <img src="assets/noun-spaceship-269595.svg" alt="Spaceship" class="rocket-icon inject-svg drawable-svg">
+                        <img src="assets/noun-spaceship-269595.svg" alt="Spaceship"
+                            class="rocket-icon inject-svg drawable-svg">
                     </div>
                 </div>
                 <button id="start-journey-btn" class="glow-btn">START JOURNEY</button>
@@ -58,18 +74,21 @@
         <section id="scene2" class="scene">
             <div class="camera-environment">
                 <div class="vintage-camera pb-camera">
-                    <img src="assets/noun-polaroid-camera-3572306.svg" alt="Vintage Camera" class="camera-icon inject-svg drawable-svg">
+                    <img src="assets/noun-polaroid-camera-3572306.svg" alt="Vintage Camera"
+                        class="camera-icon inject-svg drawable-svg">
                     <div class="shutter-btn" id="shutter-btn"></div>
                     <div class="press-hint" id="camera-hint">
                         <span class="press-text">Press me!</span>
                         <svg class="squiggly-arrow" viewBox="0 0 100 100">
                             <!-- arrow -->
-                            <path d="M70 10 Q 50 30, 70 50 T 40 80" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
-                            <path d="M35 70 L 40 80 L 52 75" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M70 10 Q 50 30, 70 50 T 40 80" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
+                            <path d="M35 70 L 40 80 L 52 75" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
                         </svg>
                     </div>
                 </div>
-                
+
                 <div id="photos-container">
                     <!-- photos -->
                 </div>
@@ -80,12 +99,21 @@
         <section id="scene3" class="scene">
             <div class="macintosh-container">
                 <div class="macintosh-wrapper">
-                    <img src="assets/noun-apple-2-97116.svg" alt="Retro Apple Computer" class="mac-svg">
+                    <img src="assets/noun-apple-2-97116.svg" alt="Retro Apple Computer"
+                        class="mac-svg inject-svg drawable-svg" style="--draw-duration: 5s;">
+                    <div class="press-hint" id="mac-hint" style="position: absolute; right: 20%; top: -15%;">
+                        <span class="press-text">Turn the mac on!</span>
+                        <svg class="squiggly-arrow" viewBox="0 0 100 100" style="transform: rotate(45deg);">
+                            <path d="M30 10 Q 50 30, 70 50 T 80 80" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
+                            <path d="M65 70 L 80 80 L 85 65" fill="none" stroke="#fff" stroke-width="4"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="power-btn" id="mac-power-btn" style="top: 75%; left: 80%;">
+                        <div class="power-led" id="power-led-indicator"></div>
+                    </div>
                     <div class="mac-screen-overlay" id="mac-screen-scroll">
-                        <div class="power-btn" id="mac-power-btn">
-                            <div class="power-led" id="power-led-indicator"></div>
-                            <div class="camera-lens"></div>
-                        </div>
                         <div class="os-content" id="mac-os" style="display: none;">
                             <div class="letter-content" id="letter-text"></div>
                             <button id="open-surprise-btn" class="mac-btn hidden">[ GO TO NEXT PAGE ]</button>
@@ -99,8 +127,18 @@
         <section id="scene4" class="scene">
             <div class="space-environment">
                 <h1 id="happy-birthday-text">HAPPY BIRTHDAY</h1>
-                <div class="cake-container" id="space-cake">
-                    <svg viewBox="0 0 100 100" width="1em" height="1em"><rect x="20" y="50" width="60" height="40" rx="5" fill="#ffb6c1"/><path fill="#fff" d="M20 50 Q30 60 40 50 T60 50 T80 50 V60 H20 Z"/><rect x="45" y="20" width="10" height="30" fill="#ffd700"/><circle cx="50" cy="15" r="5" fill="#ff4500"/></svg>
+                <div class="cake-container" id="space-cake" style="--draw-duration: 35s;">
+                    <img src="assets/noun-cake-8259639.svg" alt="Cake" class="cake-svg inject-svg drawable-svg">
+                </div>
+                <div class="press-hint" id="cake-hint"
+                    style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); opacity: 0;">
+                    <span class="press-text">Cut the cake!</span>
+                    <svg class="squiggly-arrow" viewBox="0 0 100 100" style="transform: rotate(180deg);">
+                        <path d="M70 10 Q 50 30, 70 50 T 40 80" fill="none" stroke="#fff" stroke-width="4"
+                            stroke-linecap="round" />
+                        <path d="M35 70 L 40 80 L 52 75" fill="none" stroke="#fff" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
                 </div>
                 <div id="final-polaroid" class="polaroid-inner hidden">
                     <div class="photo-placeholder">[FINAL_IMAGE]</div>
@@ -120,4 +158,5 @@
     <script src="js/scene4.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

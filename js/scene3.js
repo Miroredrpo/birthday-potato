@@ -17,13 +17,15 @@ function initScene3() {
 
 document.getElementById('mac-power-btn').addEventListener('click', () => {
     
+    // hide hint
+    const hint = document.getElementById('mac-hint');
+    if (hint) hint.classList.add('hidden');
+
     // notch expands
     const notchBtn = document.getElementById('mac-power-btn');
     notchBtn.classList.add('activating');
     
     setTimeout(() => {
-        // hide power button
-        notchBtn.style.display = 'none';
         
         // scale up
         gsap.to('.macintosh-wrapper', {

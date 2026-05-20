@@ -481,14 +481,15 @@ body {
     height: 100%;
     display: block;
     filter: invert(0.9) drop-shadow(0 0 20px rgba(51, 255, 0, 0.4));
+    --draw-duration: 8s;
 }
 
 .mac-screen-overlay {
     position: absolute;
-    top: 17.2%;
-    left: 26.5%;
-    width: 40%;
-    height: 25.8%;
+    top: 14%;
+    left: 22%;
+    width: 49%;
+    height: 27.4%;
     background: #000;
     border-radius: 5px;
     overflow-y: auto;
@@ -531,69 +532,34 @@ body {
 
 .power-btn {
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 18px;
+    transform: none;
+    width: 30px;
+    height: 30px;
     background: #111;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    border-top: none;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.4rem;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 240, 255, 0.4), inset 0 0 5px rgba(255, 255, 255, 0.2);
-    color: var(--text-light);
     z-index: 10;
-    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation: bounceNotch 2s infinite;
-}
-
-@keyframes bounceNotch {
-
-    0%,
-    100% {
-        transform: translateX(-50%) translateY(0);
-        box-shadow: 0 0 10px rgba(0, 240, 255, 0.4);
-    }
-
-    50% {
-        transform: translateX(-50%) translateY(2px);
-        box-shadow: 0 0 20px rgba(0, 240, 255, 0.8);
-    }
+    transition: all 0.2s ease;
 }
 
 .power-btn:hover {
-    height: 22px;
+    transform: scale(1.1);
     background: #1a1a1a;
     border-color: rgba(255, 255, 255, 0.8);
 }
 
 .power-btn.activating {
-    height: 100% !important;
-    width: 100% !important;
-    border-radius: 0 !important;
-    background: #000 !important;
-    border: none !important;
-    z-index: 20;
-    color: transparent;
-    box-shadow: none !important;
+    transform: scale(0.9) !important;
+    background: #222 !important;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.8) !important;
 }
 
-.camera-lens {
-    width: 6px;
-    height: 6px;
-    background: #080808;
-    border-radius: 50%;
-    position: absolute;
-    top: 4px;
-    right: 8px;
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, 1), 0 0 1px rgba(255, 255, 255, 0.1);
-}
+
 
 .camera-lens::after {
     content: '';
@@ -611,7 +577,7 @@ body {
     height: 8px;
     background: #ff2a2a;
     border-radius: 50%;
-    margin-right: 15px;
+    margin-right: 0;
     box-shadow: 0 0 8px #ff2a2a, inset 0 0 2px #fff;
     transition: all 0.2s;
 }
@@ -692,20 +658,73 @@ body {
     text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 40px var(--glow-blue);
     position: absolute;
     top: 15%;
+    left: 0;
     width: 100%;
     letter-spacing: 10px;
     opacity: 0;
 }
 
 .cake-container {
-    font-size: 10rem;
+    width: clamp(200px, 40vw, 400px);
+    height: clamp(200px, 40vw, 400px);
     cursor: pointer;
     transition: transform 0.3s;
     filter: drop-shadow(0 0 30px rgba(255, 218, 185, 0.5));
+    position: relative;
+    z-index: 10;
+}
+
+.cake-svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cake-container .drawable-svg * {
+    stroke: #fff !important;
+}
+
+.scene.active .cake-container .drawable-svg * {
+    animation: drawSvgPathWhite var(--draw-duration, 20s) ease-in-out forwards;
+}
+
+/* Speed up candle flames (paths 2-4 in the cake SVG) */
+.scene.active .cake-container .drawable-svg > path:nth-child(n+2) {
+    animation: drawSvgPathWhite 8s ease-in-out forwards;
+}
+
+@keyframes drawSvgPathWhite {
+    0% {
+        stroke-dashoffset: var(--path-length, 1000);
+        fill: transparent !important;
+        stroke-opacity: 1;
+    }
+
+    80% {
+        stroke-dashoffset: 0;
+        fill: transparent !important;
+        stroke-opacity: 1;
+    }
+
+    100% {
+        stroke-dashoffset: 0;
+        fill: #fff !important;
+        stroke-opacity: 1;
+    }
 }
 
 .cake-container:hover {
     transform: scale(1.1);
+}
+
+#final-polaroid {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
 #final-message {

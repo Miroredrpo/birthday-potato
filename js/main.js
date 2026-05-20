@@ -42,10 +42,17 @@ async function injectSVGs() {
             
             // reset path lengths
             if (svgEl.classList.contains('drawable-svg')) {
+                let scale = 1;
+                if (svgEl.viewBox && svgEl.viewBox.baseVal && svgEl.viewBox.baseVal.width) {
+                    const rect = svgEl.getBoundingClientRect();
+                    if (rect.width) {
+                        scale = rect.width / svgEl.viewBox.baseVal.width;
+                    }
+                }
                 const paths = svgEl.querySelectorAll('path, circle, rect, line, polyline, polygon');
                 paths.forEach(p => {
                     const length = p.getTotalLength ? p.getTotalLength() : 1000;
-                    p.style.setProperty('--path-length', length);
+                    p.style.setProperty('--path-length', length * scale);
                 });
             }
             
